@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16 py-12">
           <div className="flex items-center">
             <Image src="/hlc_logo_svg.svg" alt="Hanse Learning Collaborative logo" width={200} height={200} />
-            <h1 className="text-4xl md:text-4xl font-medium text-gray-800">
+            <h1 className="lg:text-4xl md:text-3xl font-medium text-gray-800">
               Hansen Learning Collaborative
             </h1>
           </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Testimonial = () => {
   const testimonials = [
@@ -45,10 +45,7 @@ const Testimonial = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-medium text-center mb-12">Testimonials</h2>
-
-          {/* Carousel Container */}
           <div className="relative">
-            {/* Navigation Buttons */}
             <button
               onClick={prevTestimonial}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-2 bg-white rounded-full shadow-lg hover:bg-gray-50 focus:outline-none"
@@ -56,8 +53,6 @@ const Testimonial = () => {
             >
               &lsaquo;
             </button>
-
-            {/* Testimonial Content */}
             <div className="relative overflow-hidden">
               <div
                 className="transition-transform duration-500 ease-in-out"
@@ -92,8 +87,6 @@ const Testimonial = () => {
             >
               &rsaquo;
             </button>
-
-            {/* Dots Indicator */}
             <div className="flex justify-center space-x-2 mt-8">
               {testimonials.map((_, index) => (
                 <button

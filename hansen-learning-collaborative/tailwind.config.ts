@@ -15,6 +15,7 @@ export default {
         sage_dark: "#babdac",
         peach: '#efb26f',
         chocolate: '#9f4c0a',
+        chocolate_dark: "#5e2e06",
         auburn: '#a7010d',
         scarlet: '#fe0000'
       },

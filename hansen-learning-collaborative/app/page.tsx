@@ -1,14 +1,12 @@
 import About from "./components/About";
 import Banner from "./components/Banner";
 import ContactForm from "./components/ContactForm";
-import Header from "./components/Header";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <div>
       <Banner />
       <About />
       <Services />
