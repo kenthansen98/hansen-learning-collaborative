@@ -1,13 +1,46 @@
+'use client';
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
 const Header = () => {
-    return (<header className="bg-blue-50 py-16">
-        <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-                Hansen Learning Collaborative
+  const [activeTab, setActiveTab] = useState('home');
+
+  return (
+    <header className="bg-sage">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16 py-12">
+          <div className="flex items-center">
+            <Image src="/hlc_logo_svg.svg" alt="Hanse Learning Collaborative logo" width={200} height={200} />
+            <h1 className="text-4xl md:text-4xl font-medium text-gray-800">
+              Hansen Learning Collaborative
             </h1>
-            <p className="text-xl text-blue-800 max-w-2xl">
-                Empowering students to reach their full potential through personalized educational consulting and support services.
-            </p>
+          </div>
+          <div className="flex space-x-4">
+            <Link
+              href="/"
+              className={`px-3 py-2 rounded-md text-sm font-medium ${activeTab === 'home'
+                ? 'bg-sage_dark text-gray-900'
+                : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              onClick={() => setActiveTab('home')}
+            >
+              Home
+            </Link>
+            <Link
+              href="/blog"
+              className={`px-3 py-2 rounded-md text-sm font-medium ${activeTab === 'blog'
+                ? 'bg-sage_dark text-gray-900'
+                : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              onClick={() => setActiveTab('blog')}
+            >
+              Blog
+            </Link>
+          </div>
         </div>
+      </div>
     </header>)
 }
 

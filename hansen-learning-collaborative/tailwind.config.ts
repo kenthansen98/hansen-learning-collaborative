@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        sage: '#e4e7d2',
+        sage_dark: "#babdac",
+        peach: '#efb26f',
+        chocolate: '#9f4c0a',
+        auburn: '#a7010d',
+        scarlet: '#fe0000'
       },
     },
   },
