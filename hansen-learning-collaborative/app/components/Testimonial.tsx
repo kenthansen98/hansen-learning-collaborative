@@ -1,7 +1,3 @@
-'use client';
-
-import { useState } from "react";
-
 const Testimonial = () => {
   const testimonials = [
     {
@@ -26,78 +22,27 @@ const Testimonial = () => {
     }
   ]
 
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
-  };
-
   return (
     <section className="bg-sage py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-medium text-center mb-12">Testimonials</h2>
-          <div className="relative">
-            <button
-              onClick={prevTestimonial}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-2 bg-white rounded-full shadow-lg hover:bg-gray-50 focus:outline-none"
-              aria-label="Previous testimonial"
-            >
-              &lsaquo;
-            </button>
-            <div className="relative overflow-hidden">
-              <div
-                className="transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
-              >
-                <div className="flex">
-                  {testimonials.map((testimonial, index) => (
-                    <div
-                      key={index}
-                      className="w-full flex-shrink-0 px-8"
-                      style={{ width: '100%' }}
-                    >
-                      <blockquote className="text-center">
-                        <p className="text-xl text-gray-700 italic mb-8">
-                          "{testimonial.text}"
-                        </p>
-                        <cite className="not-italic">
-                          <div className="font-semibold text-chocolate">{testimonial.name}</div>
-                          <div className="text-gray-600 text-sm mt-1">{testimonial.role}</div>
-                        </cite>
-                      </blockquote>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 className="text-4xl font-medium text-center mb-12">Testimonials</h2>
+        <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+          <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-4">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.name} className="pt-8 sm:inline-block sm:w-full sm:px-4">
+                <figure className="rounded-2xl bg-gray-50 p-8 text-sm/6">
+                  <blockquote className="text-gray-900">
+                    <p>{`“${testimonial.text}”`}</p>
+                  </blockquote>
+                  <figcaption className="mt-6 flex items-center gap-x-4">
+                    <div>
+                      <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                      <div className="text-gray-600">{testimonial.role}</div>
                     </div>
-                  ))}
-                </div>
+                  </figcaption>
+                </figure>
               </div>
-            </div>
-
-            <button
-              onClick={nextTestimonial}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 p-2 bg-white rounded-full shadow-lg hover:bg-gray-50 focus:outline-none"
-              aria-label="Next testimonial"
-            >
-              &rsaquo;
-            </button>
-            <div className="flex justify-center space-x-2 mt-8">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  className={`w-2 h-2 rounded-full transition-colors duration-200 ${currentTestimonial === index ? 'bg-chocolate' : 'bg-gray-300'
-                    }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </div>
