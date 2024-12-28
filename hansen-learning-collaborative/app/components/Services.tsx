@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 const Card = ({ title, description }: { title: string, description: string }) => {
   return (
     <div className="bg-gray-100 rounded-lg shadow-lg p-6">
