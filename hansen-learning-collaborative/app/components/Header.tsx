@@ -1,11 +1,11 @@
 'use client';
 
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const [activeTab, setActiveTab] = useState('home');
+  const pathName = usePathname();
+  // const [activeTab, setActiveTab] = useState(pathName === '/' ? 'home' : 'blog');
 
   return (
     <header className="bg-sage">
@@ -17,7 +17,7 @@ const Header = () => {
               Hansen Learning Collaborative
             </h1>
           </div>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <Link
               href="/"
               className={`px-3 py-2 rounded-md text-sm font-medium ${activeTab === 'home'
@@ -38,7 +38,7 @@ const Header = () => {
             >
               Blog
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>)

@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Futura, Helvetica;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-@layer base {
-  :root {
-    --radius: 0.5rem;
-  }
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Futura, Helvetica;
 }
