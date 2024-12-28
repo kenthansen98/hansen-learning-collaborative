@@ -2,6 +2,7 @@
 
 import { sendEmail } from "@/app/actions/send-email";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -13,6 +14,9 @@ const FormSchema = z.object({
 })
 
 const ContactForm = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -24,7 +28,24 @@ const ContactForm = () => {
   })
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    await sendEmail(data);
+    setSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    const result = await sendEmail(data);
+
+    if (result.success) {
+      setSubmitStatus({
+        type: 'success',
+        message: 'Your message was sent successfully!'
+      });
+    } else {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Sorry, there was a problem sending your message. Please try again.'
+      });
+    }
+
+    setSubmitting(false);
     form.reset();
   }
 
@@ -89,12 +110,18 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10">
+        {submitStatus.message && (
+          <div className={`p-4 mt-5 rounded-md ${submitStatus.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+            }`}>
+            {submitStatus.message}
+          </div>
+        )}
+        <div className={`${submitStatus.message ? 'mt-5' : 'mt-10'}`}>
           <button
             type="submit"
             className="block w-full rounded-md bg-chocolate px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-chocolate_dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chocolate"
           >
-            Send message
+            {submitting ? 'Sending...' : 'Send Message'}
           </button>
         </div>
       </form>
