@@ -22,7 +22,7 @@ const About = () => {
             </h2>
             <div className="prose prose-lg text-gray-700">
               <p>
-                Whether as a teacher, instructional coach or administrator, I see myself as a colalborative problem solver.
+                Whether as a teacher, instructional coach or administrator, I see myself as a collaborative problem solver.
                 My two decades of experience in elementary and secondary public education have taught me to listen deeply,
                 ask questions and work alongside my clients to arrive at solutions that move them forward towards their goals.
                 Using systems thinking and quality improvement tools I help my clients keep the big picture in mind as they
