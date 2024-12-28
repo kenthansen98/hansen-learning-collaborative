@@ -22,7 +22,7 @@ const Services = () => {
             description="Are you thinking about how to meet the needs of your diverse learners? Do you need a thinking partner as you contemplate infusing your curriculum with inquiry? Do you want to align your practices with your school or district's mission and vision? You can count on me to listen and collaborate with you and your stakeholders." />
           <Card
             title="Training and Coaching"
-            description="I am available to coach teachers and administrators, indivdually or as teams. I am here to be help you meet your professional goals and better serve your students and your community." />
+            description="I am available to coach teachers and administrators, individually or as teams. I am here to be help you meet your professional goals and better serve your students and your community." />
           <Card
             title="Curriculum Design"
             description="Either through collaboration with Disrict personnel or as a deliverable, I can create project-based units of study for any subject area where students' language, culture and interests are used to build motivation and relevance." />
