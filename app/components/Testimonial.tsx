@@ -27,7 +27,7 @@ const Testimonial = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-4xl font-medium text-center mb-12">Testimonials</h2>
         <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
-          <div className="-mt-8 sm:-mx-4 columns-2 sm:text-[0]">
+          <div className="-mt-8 sm:-mx-4 columns-1 md:columns-2 sm:text-[0]">
             {testimonials.map((testimonial) => (
               <div key={testimonial.name} className="pt-8 sm:inline-block sm:w-full sm:px-4">
                 <figure className="rounded-2xl bg-gray-50 p-8 text-sm/6">

@@ -51,7 +51,7 @@ const ContactForm = () => {
 
   return (
     <section className="py-16 container mx-auto px-4">
-      <h2 className="text-4xl font-medium text-center">Get in touch</h2>
+      <h2 className="text-4xl font-medium text-center mb-8 ">Get in touch</h2>
       <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto max-w-xl sm:mt-12">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
