@@ -13,7 +13,7 @@ const Testimonial = () => {
     {
       name: "Carolyn Pierce",
       role: "Instructional Coach and Administrator",
-      text: "I have worked closely with Susan's approach to the coaching work is deliberate, thoughtful, and always student-centered. Her extensive classroom experience as a teacher and as a coach has given her a wealth of knowledge about teaching and learning. This includes designing and implementing curriculum, best instructional practices, assessment design and interpretation, and many other relevant topics.",
+      text: "Susan's approach to the coaching work is deliberate, thoughtful, and always student-centered. Her extensive classroom experience as a teacher and as a coach has given her a wealth of knowledge about teaching and learning. This includes designing and implementing curriculum, best instructional practices, assessment design and interpretation, and many other relevant topics.",
     },
     {
       name: "Esmeralda Lara",
