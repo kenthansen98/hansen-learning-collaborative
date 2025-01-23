@@ -26,7 +26,7 @@ const About = () => {
                 My two decades of experience in elementary and secondary public education have taught me to listen deeply,
                 ask questions and work alongside my clients to arrive at solutions that move them forward towards their goals.
                 Using systems thinking and quality improvement tools I help my clients keep the big picture in mind as they
-                optimize their various processes. My areas of expertise include project-based learning, dual langauge education,
+                optimize their various processes. My areas of expertise include project-based learning, dual language education,
                 and literacy for multilinguals.
               </p>
             </div>
